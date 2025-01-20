@@ -4,7 +4,7 @@ indexing in databases to make the queries faster for a big scale application whe
 --after starting a postgres db locally and we create a table for users and their posts
 --then we run a command that creates 5 users and for each user they create 250000 posts
 
---command to create table of users and posts>>>
+# command to create table of users and posts>>>
 
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
@@ -42,7 +42,7 @@ END $$;
 
 --then we do this and see>
 
- EXPLAIN ANALYSE SELECT * FROM posts WHERE user_id=1 LIMIT 40;
+ # EXPLAIN ANALYSE SELECT * FROM posts WHERE user_id=1 LIMIT 40;
 
 
  it takes 0.75ms which is less
@@ -54,9 +54,9 @@ END $$;
 
 
 
---results when we run a command which selcts posts from a user with id = 2 limits= 40>>
+# results when we run a command which selcts posts from a user with id = 2 limits= 40>>
 
- EXPLAIN ANALYSE SELECT * FROM POSTS WHERE user_id=2 limit 40;
+--EXPLAIN ANALYSE SELECT * FROM POSTS WHERE user_id=2 limit 40;
                                                     QUERY PLAN
 -------------------------------------------------------------------------------------------------------------------
  Limit  (cost=0.00..4.53 rows=40 width=563) (actual time=29.699..29.704 rows=40 loops=1)
