@@ -161,6 +161,15 @@ after complex indexing >>
 ![image](https://github.com/user-attachments/assets/4dcc4375-c0a9-4a30-9cfa-74a014972e80)
 
 
+# INDEXING IN PRISMA >>
+
+![image](https://github.com/user-attachments/assets/5a0d6b60-7fbe-414f-afa5-fa4aef627c4f)
+
+what happened above is every posts has index to an user id so that when somone searches for some user's posts then the indexing can happen smoothly
+as all the posts are indexed with an userID
+
+
+
 
 
 
