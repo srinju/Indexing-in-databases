@@ -50,3 +50,21 @@ END $$;
  but if we do explain analyse select count(*) from posts (((which counts all the posts in the table that is 5 mil)
 
  it takes 70.89 ms which is very high and not good for a large scale application
+
+
+
+
+--results when we run a command which selcts posts from a user with id = 2 limits= 40>>
+
+ EXPLAIN ANALYSE SELECT * FROM POSTS WHERE user_id=2 limit 40;
+                                                    QUERY PLAN
+-------------------------------------------------------------------------------------------------------------------
+ Limit  (cost=0.00..4.53 rows=40 width=563) (actual time=29.699..29.704 rows=40 loops=1)
+   ->  Seq Scan on posts  (cost=0.00..56542.00 rows=499000 width=563) (actual time=29.697..29.700 rows=40 loops=1)
+         Filter: (user_id = 2)
+         Rows Removed by Filter: 500000
+ Planning Time: 0.077 ms
+ Execution Time: 29.745 ms
+(6 rows)
+
+it takes 30 ms pretty slow
