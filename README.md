@@ -135,7 +135,7 @@ so suppose someone asks for user 5 posts then you dont linearly search the whole
 what you do is we search the data structure we made that is indexing there it is in sorted manner >
 
 applly binary search over there and get the location of the posts of the user with id  = 5 ; 
-which results in quering faster
+which results in quering faster in O(log(n))
 
 
 
