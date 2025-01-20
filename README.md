@@ -120,4 +120,22 @@ General Use Case:
 Indexes are often created on columns that are frequently used in WHERE clauses, JOIN conditions, or ORDER BY clauses.
 In summary, this command is optimizing your database queries involving the user_id column in the posts table by creating an index for it.
 
+# in short what the indexing does is >>
+
+it creats another data structure where suppose the posts of each user's address in the database are stored in that data structure in a sorted manner
+
+
+![image](https://github.com/user-attachments/assets/eba68dee-3840-432c-b83b-65f3b0830c0f)
+
+
+so basically from the image  --> it points to the location of the data in the database
+
+so suppose someone asks for user 5 posts then you dont linearly search the whole database>
+
+what you do is we search the data structure we made that is indexing there it is in sorted manner >
+
+applly binary search over there and get the location of the posts of the user with id  = 5 ; 
+which results in quering faster
+
+
 
