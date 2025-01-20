@@ -168,6 +168,10 @@ after complex indexing >>
 what happened above is every posts has index to an user id so that when somone searches for some user's posts then the indexing can happen smoothly
 as all the posts are indexed with an userID
 
+# complex indexing in prisma >>
+
+![image](https://github.com/user-attachments/assets/9b0fd659-95c8-49fc-95cc-fefc189f58cf)
+
 
 
 
