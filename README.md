@@ -138,4 +138,30 @@ applly binary search over there and get the location of the posts of the user wi
 which results in quering faster in O(log(n))
 
 
+# ANOTHER PROBELM THAT ARISES IN DATABASES>>
+
+suppose users are searching for a post with title and description then it will take time too .
+
+like >>
+
+![image](https://github.com/user-attachments/assets/750ddb49-7ad0-45d8-8440-d299bbba0c45)
+
+
+as you can see it takes around 174 ms which is very very high.
+
+
+so to tackle this we use a concept called complex indexing >>
+
+we can see we are searching based on title and description of the posts and not just user_id
+
+CREATE INDEX idx_posts_user_id_title ON posts (description, title);
+
+after complex indexing >>
+
+![image](https://github.com/user-attachments/assets/4dcc4375-c0a9-4a30-9cfa-74a014972e80)
+
+
+
+
+
 
